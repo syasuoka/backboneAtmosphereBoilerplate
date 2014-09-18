@@ -6,9 +6,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
     });
 
-/*
-    // Load tasks and configuration.
+    // Loads all grunt configs under build/*.js
+    // This way you can modularize your grunt configs instead of one giant file
     grunt.loadTasks('build');
+
+    /*
 
     // Register alias tasks.
     grunt.registerTask('setup-dev',
@@ -44,5 +46,15 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['dev']);
     */
+
+    grunt.registerTask('setup-dev',
+        'Prepare development environment',
+        ['clean:prod', 'jade:dev', 'stylus:dev']);
+
+    grunt.registerTask('dev',
+        'Start a development web server.',
+        ['setup-dev', 'watch']);
+
+    grunt.registerTask('default', ['dev']);
 
 };
