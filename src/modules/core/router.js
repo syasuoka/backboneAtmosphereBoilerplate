@@ -6,8 +6,6 @@ define(function(require) {
   var MainLayout = require('modules/layouts/main');
   var IndexPage = require('modules/pages/index-page');
 
-  var photos = new PhotoCollection();
-
   var Router = Backbone.Router.extend({
 
     initialize: function() {

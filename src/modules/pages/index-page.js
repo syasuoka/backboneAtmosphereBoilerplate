@@ -1,18 +1,18 @@
 define(function(require) {
-  'use strict';
+    'use strict';
 
-  var TwoRowLayout = require('modules/layouts/two-row');
+    var TwoRowLayout = require('modules/layouts/two-row');
 
-  var IndexPage = TwoRowLayout.extend({
-    initialize: function() {
-    },
+    var IndexPage = TwoRowLayout.extend({
+        initialize: function() {
+        },
 
-    afterRender: function() {
-      var self = this;
+        afterRender: function() {
+            var self = this;
 
-      TwoRowLayout.prototype.afterRender.apply(this);
-    }
-  });
+            TwoRowLayout.prototype.afterRender.apply(this);
+        }
+    });
 
-  return IndexPage;
+    return IndexPage;
 });
