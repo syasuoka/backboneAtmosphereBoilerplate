@@ -9,7 +9,18 @@
             underscore: 'bower_components/lodash/dist/lodash.underscore',
             lodash: 'bower_components/lodash/dist/lodash',
             tmpl: 'bower_components/lodash-template-loader/loader',
-            //tmpl: 'bower_components/handlebars/handlebars',
+            hbs: 'bower_components/require-handlebars-plugin/hbs',
+            'hbs/underscore': 'bower_components/require-handlebars-plugin/hbs/underscore',
+            'hbs/i18nprecompile': 'bower_components/require-handlebars-plugin/hbs/i18nprecompile',
+            'hbs/json2': 'bower_components/require-handlebars-plugin/hbs/json2',
+            'hbs/handlebars': 'bower_components/require-handlebars-plugin/hbs/handlebars'
+
+        },
+        hbs: {
+            helpers: true,
+            i18n: false,
+            templateExtension: 'html',
+            partialsUrl: ''
         },
 
         deps: ['main']

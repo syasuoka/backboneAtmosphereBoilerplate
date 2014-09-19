@@ -11,7 +11,6 @@
         "try",
         "catch"
     ],
-    "maximumLineLength": 80,
     "validateQuoteMarks": "'",
     "disallowTrailingWhitespace": true
 }

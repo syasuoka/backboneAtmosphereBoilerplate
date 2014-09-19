@@ -1,45 +1,45 @@
 
 define(function(require) {
 
-  'use strict';
+    'use strict';
 
-  var Backbone = require('backbone');
+    var Backbone = require('backbone');
 
-  var BaseView = Backbone.View.extend({
+    var BaseView = Backbone.View.extend({
 
-    preDestroy: function() {},
+        preDestroy: function() {},
 
-    destroy: function() {
-      // In case an instance has specialized logic for cleaning itself up,
-      // invoke the `preDestroy` hook before any actual destruction occurs.
-      this.preDestroy();
+        destroy: function() {
+            // In case an instance has specialized logic for cleaning itself up,
+            // invoke the `preDestroy` hook before any actual destruction occurs.
+            this.preDestroy();
 
-      this.stopListening();
-      this.$el.empty();
+            this.stopListening();
+            this.$el.empty();
 
-      return this;
-    },
+            return this;
+        },
 
-    update: function() {
-      var data = this.serializeData();
-      var renderedTemplate = this.template(data);
+        update: function() {
+            var data = this.serializeData();
+            var renderedTemplate = this.template(data);
 
-      this.$el.html(renderedTemplate);
-    },
+            this.$el.html(renderedTemplate);
+        },
 
-    render: function() {
-      this.update();
-      this.afterRender();
+        render: function() {
+            this.update();
+            this.afterRender();
 
-      return this;
-    },
+            return this;
+        },
 
-    afterRender: function() {},
+        afterRender: function() {},
 
-    serializeData: function() {}
+        serializeData: function() {}
 
-  });
+    });
 
-  return BaseView;
+    return BaseView;
 
 });

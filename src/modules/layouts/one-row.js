@@ -3,7 +3,7 @@ define(function(require) {
     'use strict';
 
     var BaseLayout = require('modules/core/base-layout');
-    var template = require('tmpl!modules/layouts/one-row');
+    var template = require('hbs!modules/layouts/templates/one-row');
 
     var OneRowLayout = BaseLayout.extend({
         template: template,

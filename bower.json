@@ -1,20 +1,21 @@
 {
-    "name": "backboneAtmosphereBoilerplate",
-    "version": "0.1.0",
-    "homepage": "https://github.com/syasuoka/backboneAtmosphereBoilerplate",
-    "authors": [
-        "Shinobu Yasuoka"
-    ],
-    "description": "Boilerplate for a single page web-app using Backbone and the Atmosphere framework",
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "jquery": "~2.1.1",
-        "backbone": "~1.1.2",
-        "lodash": "~2.4.1",
-        "requirejs": "~2.1.14",
-        "lodash-template-loader": "~0.1.6",
-        "almond": "~0.3.0",
-        "handlebars": "~2.0.0"
-    }
+  "name": "backboneAtmosphereBoilerplate",
+  "version": "0.1.0",
+  "homepage": "https://github.com/syasuoka/backboneAtmosphereBoilerplate",
+  "authors": [
+    "Shinobu Yasuoka"
+  ],
+  "description": "Boilerplate for a single page web-app using Backbone and the Atmosphere framework",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "lodash": "~2.4.1",
+    "requirejs": "~2.1.14",
+    "lodash-template-loader": "~0.1.6",
+    "almond": "~0.3.0",
+    "handlebars": "~2.0.0",
+    "require-handlebars-plugin": "~0.8.1"
+  }
 }
