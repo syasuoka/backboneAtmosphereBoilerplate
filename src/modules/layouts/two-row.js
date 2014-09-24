@@ -3,9 +3,6 @@ define(function(require) {
 
     var BaseLayout = require('modules/core/base-layout');
     var template = require('hbs!modules/layouts/templates/two-row');
-    var $ = require('jquery');
-
-    var doc = $(document);
 
     var TwoRowLayout = BaseLayout.extend({
         template: template,

@@ -3,8 +3,12 @@ define(function(require) {
 
     var Backbone = require('backbone');
 
+    var ItemCollection = require('modules/components/item/collection');
+
     var MainLayout = require('modules/layouts/main');
     var IndexPage = require('modules/pages/index-page');
+
+    var items = new ItemCollection();
 
     var Router = Backbone.Router.extend({
 
@@ -36,6 +40,7 @@ define(function(require) {
                 viewType: IndexPage,
                 container: '.main',
                 options: {
+                    collection: items
                 }
             });
         }

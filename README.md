@@ -11,3 +11,4 @@ Boilerplate for a single page web-app using Backbone and the Atmosphere framewor
 
 /* Tips */
 - running npm install --save-dev <- this option installs the npm package and adds the package to the devDependencies list in the package.json file
+- cannot have handlebars templates in the same directory as any .js files with the same name as the template
