@@ -22,6 +22,8 @@ module.exports = function(grunt) {
     grunt.registerTask('server',
         'Start the REST and connect servers.',
         function() {
+            // Where you add scripts to be run on the server
+            // Adding database to run on server
             require('./database/database');
             grunt.task.run('connect:' + this.args.join(':'));
         });
