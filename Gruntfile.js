@@ -22,6 +22,7 @@ module.exports = function(grunt) {
     grunt.registerTask('server',
         'Start the REST and connect servers.',
         function() {
+            require('./database/database');
             grunt.task.run('connect:' + this.args.join(':'));
         });
 
