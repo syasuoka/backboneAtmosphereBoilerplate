@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         function() {
             // Where you add scripts to be run on the server
             // Adding database to run on server
-            require('./database/database');
+            require('./database/server');
             grunt.task.run('connect:' + this.args.join(':'));
         });
 

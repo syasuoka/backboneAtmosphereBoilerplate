@@ -7,9 +7,20 @@ define(function(require) {
     var ListView = BaseView.extend({
         template: template,
         serializeData: function() {
-            return {
-                //list: this.collection.toJSON()
+            var list = [];
+            var noResults = true;
+
+            if (this.collection) {
+                list = this.collection.toJSON();
+                noResults = false;
+            }
+
+            var data = {
+                list: list,
+                noResults: noResults
             };
+
+            return (data);
         }
     });
 

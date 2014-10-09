@@ -1,5 +1,9 @@
-<ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-</ul>
+{{#if noResults}}
+    <div>Nothing!!!</div>
+{{else}}
+    <ul>
+    {{#each list}}
+        <li>{{name}}</li>
+    {{/each}}
+    </ul>
+{{/if}}

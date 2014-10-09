@@ -3,6 +3,9 @@ define(function(require) {
 
     var TwoRowLayout = require('modules/layouts/two-row');
     var ItemListView = require('modules/components/item/list');
+    var gum = require('modules/services/getUserMedia');
+
+    gum.setVideoSource(0);
 
     var IndexPage = TwoRowLayout.extend({
         initialize: function() {
@@ -15,19 +18,19 @@ define(function(require) {
 
             // create a list view with our collection. This will be empty until
             // our items have been fetched
-            self.addSubView({
+            var itemListView = self.addSubView({
                 name: 'ItemListView',
                 viewType: ItemListView,
                 container: '.content',
                 options: {
-                    //collection: self.collection
+                    collection: self.collection
                 }
             });
 
             // once our photos have been fetched, update the photo gallery collection
-            //self.collection.fetch().then(function() {
-            //    itemListView.update();
-            //});
+            self.collection.fetch().then(function() {
+                itemListView.update();
+            });
         }
     });
 
